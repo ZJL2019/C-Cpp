@@ -95,6 +95,31 @@ void Empty(int arr[], int len)
 		arr[i] = 0;
 	}
 }
+int FindArrOnce(int arr[], int len)//给定数组，并且只能判断一串数组中重复出现两次（两两异或）
+{
+	int i, tmp=0;
+	for (i = 0; i < len; i++)
+	{
+		tmp =tmp^arr[i];
+	}
+	return tmp;
+}
+
+	//int i,j,cnt=0;//适用于所有数组，出现多次不设规定（需重新创建数组）
+	//int a[100] = { 0 };
+	//for (i = 0; i < len; i++)
+	//{
+	//	a[arr[i]]++;
+	//}
+	//for (i = 0; i < len; i++)
+	//{
+	//	if (a[arr[i]] == 1)
+	//	{
+	//		return arr[i];
+	//		break;
+	//	}
+	//}
+
 void Reverse(int arr[], int len)
 {
 	int tmp;
@@ -118,15 +143,16 @@ void Show(int arr[], int len)
 }
 int main()
 {
-	int i;
-	int arr[10] = { 0 };
+	int arr[] = { 1, 1, 2, 2, 3, 3, 4, 4, 5 };
 	int len = sizeof(arr) / sizeof(arr[0]);
-	Init(arr, len);
+	/*Init(arr, len);
 	Show(arr, len);
 	Reverse(arr, len);
-	Show(arr, len);
-	Empty(arr, len);
-	Show(arr, len);
+	Show(arr, len);*/
+	int ret=FindArrOnce(arr, len);
+	printf("%d\n", ret);
+	/*Empty(arr, len);
+	Show(arr, len);*/
 	system("pause");
 	return 0;
 }
