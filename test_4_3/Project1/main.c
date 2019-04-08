@@ -37,12 +37,12 @@ int main()
 
 	//ì³²¨ÄÇÆõÊý£¨µÝ¹é£©
 	/*int result = Fib(40);
-	printf("result=%d\n", result);*/
-
+	printf("result=%d\n", result);
+*/
 
 	//ì³²¨ÄÇÆõÊý£¨µü´ú£©
 	/*int result = FibOne(40);
-	printf("result=%d\n", result);*/
+	printf("result=%d\n", result);
 	system("pause");
 	return 0;
-}
+}*/
