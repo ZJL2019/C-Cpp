@@ -1,23 +1,51 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
-//printf number
-void print(int n)
-{
-	if (n > 9)
-	{
-		print(n / 10);
-	}
-	printf("%d\n", n % 10);
-}
+#include<assert.h>
+#include<Windows.h>
+
+
+
+//void reverse_num(char *str)
+//{
+//	char *left = str;
+//	char *right = str + strlen(str) - 1;
+//	while (left < right)
+//	{
+//		char tmp = *left;
+//		*left = *right;
+//		*right = tmp;
+//		left++;
+//		right--;
+//	}
+//}
 int main()
 {
-	int n = 0;
-	printf("please enter a numer:");
-	scanf("%d", &n);
-	print(n);
+	char str[] = "abcdef";
+	printf("%s\n", str);
+	reverse_num(str);
+	printf("%s\n", str);
 	system("pause");
 	return 0;
 }
+////printf number
+//void print(int n)
+//{
+//	if (n > 9)
+//	{
+//		print(n / 10);
+//	}
+//	printf("%d\t", n % 10);
+//}
+//int main()
+//{
+//	int n = 0;
+//	printf("please enter a numer:");
+//	scanf("%d", &n);
+//	print(n);
+//	printf("\n");
+//	system("pause");
+//	return 0;
+//}
 
 
 
@@ -61,12 +89,14 @@ int main()
 ////str(ite)
 //int StrI(char string[])
 //{
-//	int cnt= 0;
+//	int cnt = 0;
+//	//断言不是函数，是宏,断言只在Debug环境下开发，Release面向用户
+//	assert(string != NULL);
 //	while ('\0' != *string)
 //	{
 //		cnt++;
 //		string++;
-//	}
+//	}	
 //	return cnt;
 //}
 //
@@ -120,7 +150,7 @@ int main()
 
 
 
-////sum 
+//sum 
 //int DigitSum(unsigned int x)
 //{
 //	int sum = 0;
