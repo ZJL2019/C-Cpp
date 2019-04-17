@@ -19,14 +19,15 @@ void reverse_swap(char *left, char *right)
 		right--;
 	}
 }
-char *reverse(char*p)
+void reverse(char*p)
 {
-	int len = strlen(p);
+	assert(p != NULL);
+	int len = MyStrlen(p);
 	char*start = p;
-	char*end = NULL;
-	char*ret = p;
-	reverse_swap(p, p + len - 1);
-	while (*p)
+	char*end =p+len-1;
+	//逆置整个句子
+	reverse_swap(start, end);
+	while (*p!='\0')
 	{
 		start = p;
 		while ((*p != ' ') && (*p != '\0'))
@@ -40,13 +41,23 @@ char *reverse(char*p)
 			p++;
 		}
 	}
-	return ret;
+}
+int MyStrlen(char*p)
+{
+	int count = 0;
+	while (*p != '\0')
+	{
+		count++;
+		p++;
+	}
+	return count;
 }
 int main()
 {
 	char arr[] = "student a am i";
 	printf("swap early:%s\n", arr);
-	printf("swap late:%s\n", reverse(arr));
+	reverse(arr);
+	printf("swap late:%s\n",arr);
 	system("pause");
 	return 0;
 }
@@ -75,14 +86,30 @@ int main()
 //}
 
 ////second
+int Averge1(int a, int b)
+{
+	return a + (b - a) / 2;
+}
+//a+b=(a&b)*2+(a^b)
+//(a+b)/2=(a&b)+(a^b)/2
+//(a+b)/2=(a&b)+(a^b)>>1  位运算
+//int Averge2(int a, int b)
+//{
+//	return (a + b) >> 1;
+//}
+//int Averge3(int a, int b)
+//{
+//	return (a&b) + (a^b) >> 1;
+//}
 //int main()
 //{
 //	int a = 0;
 //	int b = 0;
 //	printf("please enter two number:");
 //	scanf("%d%d", &a, &b);
-//    int avg= (a + b) >> 1;
-//	printf("%d\n", avg);
+//	printf("%d\n", Averge1(a,b));
+//	printf("%d\n", Averge2(a, b));
+//	printf("%d\n", Averge3(a, b));
 //	system("pause"); 
 //	return 0;
 //}
@@ -93,14 +120,10 @@ int main()
 //{
 //	int arr[32] = { 0 };
 //	unsigned int sum = 0;
+//	
 //	for (int i = 0; i < 32; i++)
 //	{
-//		arr[i] = value & 1;
-//		value = value >> 1;
-//	}
-//	for (int i = 0; i < 32; i++)
-//	{
-//		sum = sum + arr[i] * pow(2, 32 - 1 - i);
+//		sum += ((value >> i) & 1) * pow(2, 31 - i);
 //	}
 //	return sum;
 //}
