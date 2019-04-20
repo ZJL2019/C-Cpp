@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS 1
 #include<stdio.h>
 #include<Windows.h>
-
+//写一个函数返回参数二进制中 1 的个数 
 int  count_one_bits1(unsigned int n)
 {
 	int count = 0;
@@ -43,7 +43,7 @@ int  count_one_bits3( int n)//best
 }
 
 
-
+//获取一个数二进制序列中所有的偶数位和奇数位，分别输出二进制序列。
 void Function1(int num)
 {
 	printf("even are: ");
@@ -61,7 +61,7 @@ void Function1(int num)
 }
 
 
-
+//两个int（32位）整数m和n的二进制表达中，有多少个位(bit)不同？
 int CalcDiff(int m, int n)
 {
 	int tmp = m^n;
