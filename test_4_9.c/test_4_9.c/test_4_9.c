@@ -30,7 +30,6 @@ int main()
 
 
 
-
 // 输出一个整数的每一位。
 //void print(int num)
 //{
