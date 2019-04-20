@@ -5,6 +5,13 @@
 #include<math.h>
 #include<string.h>
 #include<assert.h>
+
+
+//有一个字符数组的内容为:"student a am i",
+//	请你将数组的内容改为"i am a student".
+//	要求：
+//	不能使用库函数。
+//	只能开辟有限个空间（空间个数和字符串的长度无关）
 //forth
 void reverse_swap(char *left, char *right)
 {
@@ -64,6 +71,9 @@ int main()
 
 
 
+////编程实现： 
+//一组数据中只有一个数字出现了一次。其他所有数字都是成对出现的。
+//请找出这个数字。（使用位运算）
 
 //third
 //int FindArrOnce(int arr[], int len)//给定数组，并且只能判断一串数组中重复出现两次（两两异或）
@@ -84,6 +94,10 @@ int main()
 //	system("pause");
 //	return 0;
 //}
+
+
+
+//不使用（a + b） / 2这种方式，求两个数的平均值。
 
 ////second
 int Averge1(int a, int b)
@@ -115,6 +129,10 @@ int Averge1(int a, int b)
 //}
 
 
+
+//编写函数：
+//unsigned int reverse_bit(unsigned int value);
+//这个函数的返回值是value的二进制位模式从左到右翻转后的值。
 ////first
 //unsigned int reverse_bit(unsigned int value)
 //{
