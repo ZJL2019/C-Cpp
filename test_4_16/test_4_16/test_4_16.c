@@ -8,7 +8,6 @@
 
 
 //在屏幕上打印杨辉三角。
-
 //third
 //int (*arr)[20] 数组指针  int *arr[20]指针数组
 #define ROW 5
