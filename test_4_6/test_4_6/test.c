@@ -25,7 +25,7 @@ int count_bit2(int x)
 	}
 	return count;
 }
-int count_bit3(int x)
+int count_bit3(int x)//判断一个二进制中有多少个1
 {
 	int count = 0;
 	while (x)
