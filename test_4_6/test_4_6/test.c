@@ -49,6 +49,7 @@ struct str
 };
 
 
+
 int main()
 {
 	unsigned char a = -1;//1111  1111  最高位为符号位
