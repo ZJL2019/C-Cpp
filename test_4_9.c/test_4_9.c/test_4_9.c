@@ -3,7 +3,8 @@
 
 
 
-
+//编程实现： 
+//两个int（32位）整数m和n的二进制表达中，有多少个位(bit)不同？
 int com(int num1, int num2)
 {
 	int n = num1^num2;
@@ -29,7 +30,7 @@ int main()
 
 
 
-
+// 输出一个整数的每一位。
 //void print(int num)
 //{
 //	if (num > 9)
@@ -49,7 +50,7 @@ int main()
 //}
 
 
-
+//获取一个数二进制序列中所有的偶数位和奇数位， 分别输出二进制序列。
 //int main()
 //{
 //	int i = 0;
@@ -85,7 +86,7 @@ int main()
 //}
 
 
-
+//写一个函数返回参数二进制中 1 的个数 
 //int count_one_bits(unsigned int value)
 //{
 //	int count = 0;
