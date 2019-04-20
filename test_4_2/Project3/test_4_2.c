@@ -78,32 +78,32 @@
 
 
 
-//Defind Array
-void Init(int arr[], int len)
-{
-	int i;
-	for (i = 0; i < len; i++)
-	{
-		scanf("%d", &arr[i]);
-	}
-}
-void Empty(int arr[], int len)
-{
-	int i;
-	for (i = 0; i < len; i++)
-	{
-		arr[i] = 0;
-	}
-}
-int FindArrOnce(int arr[], int len)//给定数组，并且只能判断一串数组中重复出现两次（两两异或）
-{
-	int i, tmp=0;
-	for (i = 0; i < len; i++)
-	{
-		tmp =tmp^arr[i];
-	}
-	return tmp;
-}
+////Defind Array
+//void Init(int arr[], int len)
+//{
+//	int i;
+//	for (i = 0; i < len; i++)
+//	{
+//		scanf("%d", &arr[i]);
+//	}
+//}
+//void Empty(int arr[], int len)
+//{
+//	int i;
+//	for (i = 0; i < len; i++)
+//	{
+//		arr[i] = 0;
+//	}
+//}
+//int FindArrOnce(int arr[], int len)//给定数组，并且只能判断一串数组中重复出现两次（两两异或）
+//{
+//	int i, tmp=0;
+//	for (i = 0; i < len; i++)
+//	{
+//		tmp =tmp^arr[i];
+//	}
+//	return tmp;
+//}
 
 	//int i,j,cnt=0;//适用于所有数组，出现多次不设规定（需重新创建数组）
 	//int a[100] = { 0 };
@@ -158,7 +158,7 @@ int main()
 }
 
 
-
+//判断闰年
 ////Judge Leap Year
 //int LeapYear(int x)
 //{
@@ -185,8 +185,8 @@ int main()
 
 
 
-
-////Swap  Number
+//给定两个整形变量的值，将两个值的内容进行交换。
+//Swap  Number
 //void Swap(int *px, int *py)
 //{
 //	int tmp = 0;
@@ -207,7 +207,7 @@ int main()
 
 
 
-
+//乘法表
 ////ShowMulti
 //void ShowMulti(int n)
 //{
