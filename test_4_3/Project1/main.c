@@ -2,7 +2,6 @@
 #include"test.h"
 
 
-
 int main()
 {
 	//¼Ó·¨add
