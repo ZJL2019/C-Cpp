@@ -183,6 +183,7 @@ int main()
 
 
 
+
 //编写一个函数实现n^k，使用递归实现
 //n^k(rec)
 //int Fun(int a, int b)
