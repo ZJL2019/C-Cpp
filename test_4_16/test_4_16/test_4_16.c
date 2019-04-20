@@ -10,49 +10,49 @@
 //在屏幕上打印杨辉三角。
 //third
 //int (*arr)[20] 数组指针  int *arr[20]指针数组
-#define ROW 5
-void  Pascal(int(*arr)[ROW], int row, int col)
-{
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < row; i++)
-	{
-		for (j = 0; j < col; j++)
-		{
-			if (i == j || j == 0)
-			{
-				arr[i][j] = 1;
-			}
-			else
-			{
-				arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
-			}
-		}
-	}
-}
-
-void Show(int(*arr)[ROW])
-{
-	int i = 0;
-	int j = 0;
-	for (i = 0; i < ROW; i++)
-	{
-		for (j = 0; j <= i; j++)
-		{
-			printf("%-5d", arr[i][j]);
-		}
-		printf("\n");
-	}
-}
-
-int main()
-{
-	int arr[ROW][ROW] = { 0 };
-	Pascal(arr, ROW, ROW);
-	Show(arr);
-	system("pause");
-	return 0;
-}
+//#define ROW 5
+//void  Pascal(int(*arr)[ROW], int row, int col)
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < row; i++)
+//	{
+//		for (j = 0; j < col; j++)
+//		{
+//			if (i == j || j == 0)
+//			{
+//				arr[i][j] = 1;
+//			}
+//			else
+//			{
+//				arr[i][j] = arr[i - 1][j - 1] + arr[i - 1][j];
+//			}
+//		}
+//	}
+//}
+//
+//void Show(int(*arr)[ROW])
+//{
+//	int i = 0;
+//	int j = 0;
+//	for (i = 0; i < ROW; i++)
+//	{
+//		for (j = 0; j <= i; j++)
+//		{
+//			printf("%-5d", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[ROW][ROW] = { 0 };
+//	Pascal(arr, ROW, ROW);
+//	Show(arr);
+//	system("pause");
+//	return 0;
+//}
 
 
 
