@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 #define _CRT_SECURE_NO_WARNINGS 1
+=======
+<<<<<<< HEAD
+	#define _CRT_SECURE_NO_WARNINGS 1
+=======
+#define _CRT_SECURE_NO_WARNINGS 1
+>>>>>>> 4c771218327e59a5db781e80a2c4bf0deed832f9
+>>>>>>> 0cb685d02293674ac8a10381e48a7a11ae57d720
 #include<stdio.h>
 #include<Windows.h>
 #include<assert.h>
