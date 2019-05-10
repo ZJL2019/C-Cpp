@@ -5,7 +5,7 @@
 #include<assert.h>
 
 
-cmpInt(const void *xp, const void *yp)//在调用时，sqrt通常传送的是数据地址
+cmpInt(const void *xp, const void *yp)//在调用时，qsqrt通常传送的是数据地址
 {
 	int*x = (int*)xp;
 	int*y = (int*)yp;
@@ -43,6 +43,8 @@ void comDouble(const void *xp, const void *yp)
 		return 0;
 	}
 }
+
+
 void swap(char *x, char *y, int size)
 {
 	int i = 0;
@@ -51,12 +53,15 @@ void swap(char *x, char *y, int size)
 		char tmp = *x;
 		*x = *y;
 		*y = tmp;
+		x++, y++;
 	}
 }
 
 
+
+
 void Myqsort(void *base, int num, int size, \
-	int(*cmp)(const void*, const void*))
+	int(*cmp)(const void*, const void*))//qsort 实现
 {
 	assert(base);
 	assert(cmp);
