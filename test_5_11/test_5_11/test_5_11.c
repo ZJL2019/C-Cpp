@@ -150,6 +150,7 @@
 //}
 
 //±ÊÎå
+<<<<<<< HEAD
 //int main()
 //{
 //	int a[5][5];
@@ -207,6 +208,14 @@ int main()
 	printf("%s\n", *--*++cpp + 3);//ER
 	printf("%s\n", *cpp[-2] + 3);//ST
 	printf("%s\n", cpp[-1][-1] + 1);//EW
+=======
+int main()
+{
+	int a[5][5];
+	int(*p)[4];
+	p = a;
+	printf("%p,%d\n", &p[4][2] - &a[4][2], &p[4][2] - &a[4][2]);//FFFFFFC,-4
+>>>>>>> c4e0b6bc181313f06b6870b897d82582023106e9
 	system("pause");
 	return 0;
 }
