@@ -127,15 +127,15 @@
 
 
 //±ÊÈý
-//int main()
-//{
-//	int a[4] = { 1, 2, 3, 4 };
-//	int *ptr1 = (int *)(&a + 1);
-//	int *ptr2 = (int *)((int)a + 1);
-//	printf("%x,%x", ptr1[-1], *ptr2);//4,02000000  
-//	system("pause");
-//	return 0;
-//}
+int main()
+{
+	int a[4] = { 1, 2, 3, 4 };
+	int *ptr1 = (int *)(&a + 1);
+	int *ptr2 = (int *)((int)a + 1);
+	printf("%x,%x", ptr1[-1], *ptr2);//4,02000000  
+	system("pause");
+	return 0;
+}
 
 
 //±ÊËÄ
@@ -150,7 +150,7 @@
 //}
 
 //±ÊÎå
-<<<<<<< HEAD
+
 //int main()
 //{
 //	int a[5][5];
@@ -199,23 +199,15 @@
 
 
 //±Ê°Ë
-int main()
-{
-	char *c[] = { "ENTER", "NEW", "POINT", "FIRST" };
-	char**cp[] = { c + 3, c + 2, c + 1, c };
-	char***cpp = cp;
-	printf("%s\n", **++cpp);//POINT
-	printf("%s\n", *--*++cpp + 3);//ER
-	printf("%s\n", *cpp[-2] + 3);//ST
-	printf("%s\n", cpp[-1][-1] + 1);//EW
-=======
-int main()
-{
-	int a[5][5];
-	int(*p)[4];
-	p = a;
-	printf("%p,%d\n", &p[4][2] - &a[4][2], &p[4][2] - &a[4][2]);//FFFFFFC,-4
->>>>>>> c4e0b6bc181313f06b6870b897d82582023106e9
-	system("pause");
-	return 0;
-}
+//int main()
+//{
+//	char *c[] = { "ENTER", "NEW", "POINT", "FIRST" };
+//	char**cp[] = { c + 3, c + 2, c + 1, c };
+//	char***cpp = cp;
+//	printf("%s\n", **++cpp);//POINT
+//	printf("%s\n", *--*++cpp + 3);//ER
+//	printf("%s\n", *cpp[-2] + 3);//ST
+//	printf("%s\n", cpp[-1][-1] + 1);//EW
+//	system("pause");
+//	return 0;
+//}
