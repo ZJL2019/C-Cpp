@@ -4,6 +4,32 @@
 #include<assert.h>
 #include<Windows.h>
 
+//9.memmove 内存移动函数
+void*Mymemmove(void*dest, const void*src, int count)
+{
+	void *ret = dest;
+	if (src > dest)
+	{
+		while (count != 0)
+		{
+			*((char*)dest) = *((char*)src);
+			((char*)dest)++;
+			((char*)src)++;
+			count--;
+		}
+	}
+	else
+	{
+		while (count--)
+		{
+			*((char*)dest + count) = *((char*)src + count);
+			//count--;
+		}
+	}
+	return ret;
+}
+
+
 //8.memcpy  内存拷贝函数
 void*Mymemcpy(void *dest, const void *src, int count)//conut:字节数
 {
@@ -162,14 +188,14 @@ int main()
 	//Mystrcat(dest, src);
 	/*Mystrstr(dest, src);*/
 	//printf("%s\n", Mystrchr(src, 'b'));
-	//printf("%d\n", Mystrcmp("abcd","abcd"));
-	int arr[10] = { 1, 2, 3, 4, 6, 7, 8, 9, 0 };
-	int arr2[10] = { 0 };
-	int*p=(int *)Mymemcpy(arr2, arr, 16);
-	for (int i = 0; i < 10; i++)
-	{
-		printf("%d ", p[i]);
-	}
+	////printf("%d\n", Mystrcmp("abcd","abcd"));
+	//int arr[10] = { 1, 2, 3, 4, 6, 7, 8, 9, 0 };
+	//int arr2[10] = { 0 };
+	//int*p=(int *)Mymemcpy(arr2, arr, 16);
+	//for (int i = 0; i < 10; i++)
+	//{
+	//	printf("%d ", p[i]);
+	//}
 	//内存拷贝函数
 	/*int *p = (int *)memcpy(arr2, arr, 16);
 	int i = 0;
@@ -177,6 +203,15 @@ int main()
 	{
 	printf("%d ", p[i]);
 	}*/
+
+	//内存移动函数
+	int arr[7] = { 1, 2, 3, 4, 5, 6, 7 };
+	int arr2[] = { 0 };
+	int *p = (int *)Mymemmove(arr+2, arr , 16);
+	for (int i = 0; i < 7; i++)
+	{
+		printf("%d ", p[i]);
+	}
 	system("pause");
 	return 0;
 }
