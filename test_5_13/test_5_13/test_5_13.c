@@ -8,6 +8,7 @@
 void*Mymemmove(void*dest, const void*src, int count)
 {
 	void *ret = dest;
+	void *p = src;
 	if (src > dest)
 	{
 		while (count != 0)
@@ -17,6 +18,7 @@ void*Mymemmove(void*dest, const void*src, int count)
 			((char*)src)++;
 			count--;
 		}
+		return ret;
 	}
 	else
 	{
@@ -25,8 +27,8 @@ void*Mymemmove(void*dest, const void*src, int count)
 			*((char*)dest + count) = *((char*)src + count);
 			//count--;
 		}
+		return p;
 	}
-	return ret;
 }
 
 
