@@ -174,19 +174,16 @@ char *Mystrcpy(char *dest, const char *src)
 	return p;
 }
 
-char *Mystrncpy(char *dest, const char *src)
-{
 
-}
 
 
 
 
 int main()
 {
-	//char *dest= "abbbcdef";//主串
-	//char *src= "bbc";//子串
-	//Mystrcpy(dest, src);
+	char dest[20]= "abbbcdef";//主串
+	char *src= "bbc";//子串
+	strncpy(dest, src,2);
 	//Mystrcat(dest, src);
 	/*Mystrstr(dest, src);*/
 	//printf("%s\n", Mystrchr(src, 'b'));
@@ -207,13 +204,13 @@ int main()
 	}*/
 
 	//内存移动函数
-	int arr[7] = { 1, 2, 3, 4, 5, 6, 7 };
+	/*int arr[7] = { 1, 2, 3, 4, 5, 6, 7 };
 	int arr2[] = { 0 };
 	int *p = (int *)Mymemmove(arr+2, arr , 16);
 	for (int i = 0; i < 7; i++)
 	{
 		printf("%d ", p[i]);
-	}
+	}*/
 	system("pause");
 	return 0;
 }
