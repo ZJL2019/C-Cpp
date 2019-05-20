@@ -170,3 +170,25 @@
 
 
 //7.ÊµÏÖmemmove
+void *Mymemmove(void *dest, const void *src, int count)
+{
+	int *p = dest;
+	if (src > dest)
+	{
+		while (count != 0)
+		{
+			*((char*)dest) = *((char*)src);
+			((char*)dest)++;
+			((char*)src)++;
+			count--;
+		}
+	}
+	else
+	{
+		while (count--)
+		{
+			*((char*)dest)+count=*((char*)src+count)
+		}
+	}
+	return p;
+}
