@@ -8,7 +8,7 @@
 void*Mymemmove(void*dest, const void*src, int count)
 {
 	void *ret = dest;
-	void *p = src;
+	const void *p = src;
 	if (src > dest)
 	{
 		while (count != 0)
@@ -74,7 +74,26 @@ int Mystrcmp(const char*str1, const char*str2)
 
 
 int Mystrncmp(const char *str1, const char *str2, int n)
-{}
+{
+		while (*str1 == *str2)
+		{
+			str1++;
+			str2++;
+			n--;
+			if (n == 0)
+			{
+				return 0;
+			}
+		}
+	if (*str1 > *str2)
+	{
+		return 1;
+	}
+	else
+	{
+		return -1;
+	}
+}
 
 //6.strchr
 const char*Mystrchr(const char *src, char ch)
@@ -138,21 +157,20 @@ char* Mystrcat(char*dest, const char* src)
 char* Mystrncat(char*dest, const char* src, int n)
 {
 	char *p = dest;
-	int i = 0;
 	while (*dest != '\0')
 	{
 		dest++;
 	}
 	//dest指向\0
-	while (*dest++ = *src++)
+	while (n)
 	{
-		if ((i++) == (i + n))
+		if ((*dest = *src) != '\0')
 		{
-			*dest = '\0';
-			break;
+			dest++;
+			src++;
+			n--;
 		}
 	}
-
 	return p;
 }
 
@@ -176,14 +194,49 @@ char *Mystrcpy(char *dest, const char *src)
 
 
 
+char *Mystrncpy(char *dest, const char *src, int n)
+{
+	char *tmp = dest;
+	while (n)
+	{
+		if ((*dest++ = *src++) != '\0')
+		{
+			n--;
+		}
+	}
+	if (n)
+	{
+		while (--n)
+		{
+			*dest++ = '\0';
+		}
+	}
+	return tmp;
+	/*char *start = dest;
 
+	while (n && (*dest++ = *src++))
+	{
+	n--;
+	}
+	if (n)
+	{
+	while (--n)
+	{
+	*dest++ = '\0';
+	}
+	}
+	return(start);*/
+}
 
 
 int main()
 {
-	char dest[20]= "abbbcdef";//主串
-	char *src= "bbc";//子串
-	strncpy(dest, src,2);
+	char *dest = "abc";//主串
+	char *src = "aac";//子串
+	//Mystrncpy(dest, src,1);
+	//Mystrncat(dest, src, 2);
+	int ret=Mystrncmp(dest, src,2);
+	printf("%d\n", ret);
 	//Mystrcat(dest, src);
 	/*Mystrstr(dest, src);*/
 	//printf("%s\n", Mystrchr(src, 'b'));
@@ -209,7 +262,7 @@ int main()
 	int *p = (int *)Mymemmove(arr+2, arr , 16);
 	for (int i = 0; i < 7; i++)
 	{
-		printf("%d ", p[i]);
+	printf("%d ", p[i]);
 	}*/
 	system("pause");
 	return 0;
