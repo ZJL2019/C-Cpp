@@ -3,7 +3,7 @@
 #include<string.h>
 #include<assert.h>
 
-#pragma pack(1)//赋予编译器的默认对齐数
+//#pragma pack(1)//赋予编译器的默认对齐数
 void* my_memmove(void *dest, void *src, int num)
 {
 	assert(dest);
@@ -60,9 +60,9 @@ typedef struct stu{//c语言中结构体成员变量不能为空
 
 
 struct A{
+	double z;
 	char x;
 	int y;
-	double z;
 };
 
 struct B{
@@ -71,10 +71,26 @@ struct B{
 	double d;
 };
 
+struct C{
+	char a;
+	char b;
+	double c;
+};
+struct D{
+	double a;
+	char b[3];
+	char *c;
+	struct C d[3];
+	double e;
+	long long *f[3];
+	char g;
+};
 int  main()
 {
 	printf("%d\n", sizeof(struct A));//16
-	printf("%d\n", sizeof(struct B));//16
+	printf("%d\n", sizeof(struct B));//32
+	printf("%d\n", sizeof(struct D));//88
+
 	//char src[32] = "hello bit!";
 	//char src1[32] = "hello bit!";
 	//my_memmove(src + 1, src, strlen(src) + 1);
