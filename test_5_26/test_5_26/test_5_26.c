@@ -1,53 +1,53 @@
-#define _CRT_SECURE_NO_WARNINGS 1
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h> 
-#include<errno.h>
-
-int main()
-{
-
-	char *p = malloc(sizeof(char)* 100);
-	if (!p)
-	{
-		printf("%d :%s\n", errno, strerror(errno));
-	}
-	memset(p, 'A', sizeof(char)* 100);
-	char *q = realloc(p, sizeof(char)* 50);
-	if (!q)
-	{
-		printf("%d :%s\n",errno,strerror(errno));
-	}
-	printf("%p, %p", p, q);
-	int i = 0;
-	for (i = 0; i < 50; i++)
-	{
-		printf("%c ", q[i]);
-	}
-	printf("\n");
-	
-	free(q);
-	//printf("Please Enter  n:");
-	//int n = 0;
-	//scanf("%d", &n);
-	////int *p = (int*)malloc(sizeof(int)*n);
-	//int *p = (int*)calloc(n, sizeof(int));
-	//if (!p)
-	//{
-	//	printf("%d : %s\n", errno, strerror(errno));
-	//	return 1;
-	//}
-	//int i = 0;
-	//for (; i < n; i++)
-	//{
-	//	p[i] = i;
-	//}
-	//printf("%p\n", p);
-	//free(p);
-	//printf("%p\n", p);//free 后中指针不发生变化，变化的是p与开辟的内存之间的关系
-	system("pause");
-	return 0;
-}
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//#include<string.h>
+//#include<stdlib.h> 
+//#include<errno.h>
+//
+//int main()
+//{
+//
+//	char *p = malloc(sizeof(char)* 100);
+//	if (!p)
+//	{
+//		printf("%d :%s\n", errno, strerror(errno));
+//	}
+//	memset(p, 'A', sizeof(char)* 100);
+//	char *q = realloc(p, sizeof(char)* 50);
+//	if (!q)
+//	{
+//		printf("%d :%s\n",errno,strerror(errno));
+//	}
+//	printf("%p, %p", p, q);
+//	int i = 0;
+//	for (i = 0; i < 50; i++)
+//	{
+//		printf("%c ", q[i]);
+//	}
+//	printf("\n");
+//	
+//	free(q);
+//	//printf("Please Enter  n:");
+//	//int n = 0;
+//	//scanf("%d", &n);
+//	////int *p = (int*)malloc(sizeof(int)*n);
+//	//int *p = (int*)calloc(n, sizeof(int));
+//	//if (!p)
+//	//{
+//	//	printf("%d : %s\n", errno, strerror(errno));
+//	//	return 1;
+//	//}
+//	//int i = 0;
+//	//for (; i < n; i++)
+//	//{
+//	//	p[i] = i;
+//	//}
+//	//printf("%p\n", p);
+//	//free(p);
+//	//printf("%p\n", p);//free 后中指针不发生变化，变化的是p与开辟的内存之间的关系
+//	system("pause");
+//	return 0;
+//}
 
 
 
